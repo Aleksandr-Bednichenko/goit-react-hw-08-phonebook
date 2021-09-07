@@ -52,6 +52,8 @@ function ContactForm() {
     const existContact = isContsctExist();
     if (existContact) {
       alert(`${existContact.name} is already in contacts.`);
+      setName("");
+      setNumber("");
       return;
     }
     dispatch(operations.addContact({ name, number }));
